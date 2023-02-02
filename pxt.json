@@ -1,6 +1,6 @@
 {
     "name": "Infrared",
-    "description": "HALJIA Infrared 1.0",
+    "description": "HALJIA Infrared 1.1",
     "dependencies": {
         "core": "*",
         "radio": "*",
