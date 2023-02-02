@@ -1,6 +1,0 @@
-{
-    "Infrared.connectIrReceiver|block": "红外接收头连接到引脚 %pin",
-    "Infrared.onIrButton|block": "按键 | %button | %action",
-    "IrButtonAction.Pressed|block": "按下",
-    "IrButtonAction.Released|block": "松开"
-}
