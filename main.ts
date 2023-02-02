@@ -202,8 +202,8 @@ namespace Infrared {
         };
     }
 
-    //% blockId="infrared_connect_receiver"
-    //% block="connect IR receiver at pin %pin"
+    //% blockId="connectIrReceiver"
+    //% block="Connect IR receiver at pin %pin"
     //% pin.fieldEditor="gridpicker"
     //% pin.fieldOptions.tooltips="false"
     //% weight=90
@@ -238,8 +238,8 @@ namespace Infrared {
         }
     }
 
-    //% blockId=infrared_on_ir_button
-    //% block="on IR button | %button | %action"
+    //% blockId=onIrButton
+    //% block="On IR button | %button | %action"
     //% button.fieldEditor="gridpicker"
     //% button.fieldOptions.tooltips="false"
     //% weight=50
