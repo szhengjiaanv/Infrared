@@ -1,15 +1,15 @@
 {
     "name": "Infrared",
-    "description": "",
+    "description": "HALJIA Infrared",
     "dependencies": {
         "core": "*",
         "radio": "*",
         "microphone": "*"
     },
     "files": [
-        "main.blocks",
         "main.ts",
-        "README.md"
+        "README.md",
+        "_locales/zh-cn/strings.json"
     ],
     "testFiles": [
         "test.ts"
