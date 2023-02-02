@@ -9,7 +9,7 @@
     "files": [
         "main.ts",
         "README.md",
-        "_locales/zh-cn/strings.json"
+        "_locales/zh-cn/Infrared-strings.json"
     ],
     "testFiles": [
         "test.ts"
