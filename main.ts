@@ -39,7 +39,7 @@ const enum IrProtocol {
     NEC = 1,
 }
 
-//% weight=10 color=#6167d5 icon="\uf1eb" block="Infrared"
+//% weight=10 color=#8067d5 icon="\uf1eb" block="Infrared"
 namespace Infrared {
     let irState: IrState;
 
