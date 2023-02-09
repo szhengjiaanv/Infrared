@@ -149,7 +149,6 @@ namespace Infrared {
     }
 
     function handleIrEvent(irEvent: number) {
-        basic.showNumber(irEvent);//test
         // Refresh repeat timer
         if (irEvent === IR_DATAGRAM || irEvent === IR_REPEAT) {
             irState.repeatTimeout = input.runningTime() + REPEAT_TIMEOUT_MS;
@@ -181,6 +180,7 @@ namespace Infrared {
 
                 irState.activeCommand = newCommand;
             }
+            basic.showNumber(newCommand);//test
         }
     }
 
