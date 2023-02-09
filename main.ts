@@ -15,7 +15,7 @@ const enum IrButton {
     LetterB = 70,
     Num0 = 1,
     Num1 = 129,
-    Num2 = 165,
+    Num2 = 65,
     Num3 = 193,
     Num4 = 33,
     Num5 = 161,
@@ -180,7 +180,7 @@ namespace Infrared {
 
                 irState.activeCommand = newCommand;
             }
-            basic.showNumber(newCommand);//test
+            //basic.showNumber(newCommand);//test
         }
     }
 
@@ -216,7 +216,7 @@ namespace Infrared {
         initIrState();
 
         irState.protocol = IrProtocol.NEC;
-        basic.showNumber(1);
+        basic.showNumber(0);
         enableIrMarkSpaceDetection(pin);
 
         background.schedule(notifyIrEvents, background.Thread.Priority, background.Mode.Repeat, REPEAT_TIMEOUT_MS);
