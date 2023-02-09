@@ -180,7 +180,7 @@ namespace Infrared {
 
                 irState.activeCommand = newCommand;
             }
-            //basic.showNumber(newCommand);//test
+            basic.showNumber(newCommand);//test
         }
     }
 
@@ -216,7 +216,7 @@ namespace Infrared {
         initIrState();
 
         irState.protocol = IrProtocol.NEC;
-        basic.showNumber(0);
+        basic.showNumber(1);
         enableIrMarkSpaceDetection(pin);
 
         background.schedule(notifyIrEvents, background.Thread.Priority, background.Mode.Repeat, REPEAT_TIMEOUT_MS);
