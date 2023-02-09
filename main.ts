@@ -2,27 +2,27 @@
 const enum IrButton {
     //% block="any"
     Any = -1,
-    Up = 0x10,
-    Down = 0x11,
-    Left = 0x12,
-    Right = 0x13,
-    TLeft = 0x20,
-    TRight = 0x21,
-    Plus = 0x22,
-    Minus = 0x23,
-    Ok = 0x60,
-    LetterA = 0x61,
-    LetterB = 0x62,
-    NUM0 = 0x80,
-    NUM1 = 0x81,
-    NUM2 = 0x82,
-    NUM3 = 0x83,
-    NUM4 = 0x84,
-    NUM5 = 0x85,
-    NUM6 = 0x85,
-    NUM7 = 0x87,
-    NUM8 = 0x88,
-    NUM9 = 0x89
+    Up = 8,
+    Down = 136,
+    Left = 72,
+    Right = 200,
+    TurnLeft = 4,
+    TurnRight = 132,
+    Plus = 68,
+    Minus = 196,
+    Ok = 6,
+    LetterA = 134,
+    LetterB = 70,
+    Num0 = 1,
+    Num1 = 129,
+    Num2 = 165,
+    Num3 = 193,
+    Num4 = 33,
+    Num5 = 161,
+    Num6 = 97,
+    Num7 = 225,
+    Num8 = 17,
+    Num9 = 145
 }
 
 const enum IrButtonAction {
@@ -180,7 +180,7 @@ namespace Infrared {
 
                 irState.activeCommand = newCommand;
             }
-            basic.showNumber(newCommand);//test
+            //basic.showNumber(newCommand);//test
         }
     }
 
@@ -259,95 +259,6 @@ namespace Infrared {
             irState.onIrButtonReleased.push(new IrButtonHandler(button, handler));
         }
     }
-
-    /**
-     * Returns the code of the IR button that was pressed last. Returns -1 (IrButton.Any) if no button has been pressed yet.
-    //% blockId=infrared_ir_button_pressed
-    //% block="IR button"
-    //% weight=70
-    export function irButton(): number {
-      basic.pause(0); // Yield to support background processing when called in tight loops
-      if (!irState) {
-        return IrButton.Any;
-      }
-      return irState.commandSectionBits >> 8;
-    }
-     */
-
-    /**
-     * Do something when an IR datagram is received.
-     * @param handler body code to run when the event is raised
-    //% blockId=infrared_on_ir_datagram
-    //% block="on IR datagram received"
-    //% weight=40
-    export function onIrDatagram(handler: () => void) {
-      initIrState();
-      irState.onIrDatagram = handler;
-    }
-     */
-
-    /**
-     * Returns the IR datagram as 32-bit hexadecimal string.
-     * The last received datagram is returned or "0x00000000" if no data has been received yet.
-    //% blockId=infrared_ir_datagram
-    //% block="IR datagram"
-    //% weight=30
-    export function irDatagram(): string {
-      basic.pause(0); // Yield to support background processing when called in tight loops
-      initIrState();
-      return (
-        "0x" +
-        ir_rec_to16BitHex(irState.addressSectionBits) +
-        ir_rec_to16BitHex(irState.commandSectionBits)
-      );
-    }
-     */
-
-    /**
-     * Returns true if any IR data was received since the last call of this function. False otherwise.
-    //% blockId=infrared_was_any_ir_datagram_received
-    //% block="IR data was received"
-    //% weight=80
-    export function wasIrDataReceived(): boolean {
-      basic.pause(0); // Yield to support background processing when called in tight loops
-      initIrState();
-      if (irState.hasNewDatagram) {
-        irState.hasNewDatagram = false;
-        return true;
-      } else {
-        return false;
-      }
-    }
-     */
-
-    /**
-     * Returns the command code of a specific IR button.
-     * @param button the button
-    //% blockId=infrared_button_code
-    //% button.fieldEditor="gridpicker"
-    //% button.fieldOptions.columns=3
-    //% button.fieldOptions.tooltips="false"
-    //% block="IR button code %button"
-    //% weight=60
-    export function irButtonCode(button: IrButton): number {
-      basic.pause(0); // Yield to support background processing when called in tight loops
-      return button as number;
-    }
-  
-    function ir_rec_to16BitHex(value: number): string {
-      let hex = "";
-      for (let pos = 0; pos < 4; pos++) {
-        let remainder = value % 16;
-        if (remainder < 10) {
-          hex = remainder.toString() + hex;
-        } else {
-          hex = String.fromCharCode(55 + remainder) + hex;
-        }
-        value = Math.idiv(value, 16);
-      }
-      return hex;
-    }
-     */
 }
 
 namespace Infrared {
