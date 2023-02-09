@@ -3,9 +3,9 @@ const enum IrButton {
     //% block="any"
     Any = -1,
     Up = 0x10,
-    Left = 0x11,
-    Right = 0x12,
-    Down = 0x13,
+    Down = 0x11,
+    Left = 0x12,
+    Right = 0x13,
     TLeft = 0x20,
     TRight = 0x21,
     Plus = 0x22,
