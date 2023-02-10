@@ -1,7 +1,5 @@
 
 const enum IrButton {
-    //% block="any"
-    Any = -1,
     Up = 8,
     Down = 136,
     Left = 72,
@@ -13,6 +11,7 @@ const enum IrButton {
     Ok = 6,
     A = 134,
     B = 70,
+    Any = -1,
     Num0 = 1,
     Num1 = 129,
     Num2 = 65,
@@ -244,6 +243,7 @@ namespace Infrared {
     //% blockId=onIrButton
     //% block="On IR button | %button | %action"
     //% button.fieldEditor="gridpicker"
+    //% button.fieldEditor.width=220
     //% button.fieldOptions.tooltips="false"
     //% weight=50
     export function onIrButton(
